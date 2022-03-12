@@ -1,0 +1,66 @@
+.select-file .select-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #4D8EEF;
+    border-radius: 6px;
+    color: #4D8EEF;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.img-crop {
+    width: 165px;
+    height: 230px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    margin-top: 16px;
+    z-index: 2;
+}
+
+.select-file {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    border: 1px dashed #BAC4CF;
+}
+.select-file input{
+    visibility: hidden;
+}
+.select-file .select-text {
+    color: #81878E;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 0px 15px;
+    line-height: 149.2%;
+    text-align: center;
+}
+.image-preview {
+    position: relative;
+}
+.img-actions img{
+    width: 20px;
+    cursor: pointer !important;
+}
+.img-actions {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: -24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .modal.show {
+        width: 100vw !important;
+    }
+}

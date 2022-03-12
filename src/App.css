@@ -1,0 +1,48 @@
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .bio-page, .bio-page * {
+    visibility: visible;
+  }
+  .bio-page {
+    width: 100% !important;
+    height: 296.8mm !important; 
+    margin: 0 !important;
+    padding: 30px 86px !important;
+    border-radius: 0;
+    overflow: hidden !important;
+  }
+  .back-img {
+    left: 15px !important;
+    width: calc(100% - 30px) !important;
+    height: calc(296.8mm - 50px) !important;
+    top: 25px !important;
+  }
+  .bio-field .action {
+    display: none;
+  }
+  .pnone {
+    display: none !important;
+  }
+  .img-crop {
+    width: 175px !important;
+    height: 240px !important;
+    right: 20px !important;
+  }
+}
+
+@media print and (max-width: 768px){
+  .back-img {
+    left: 25px !important;
+    width: calc(100% - 50px) !important;
+    height: calc(296.8mm - 50px) !important;
+    top: 25px !important;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0 !important;
+}

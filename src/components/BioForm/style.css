@@ -1,0 +1,257 @@
+.bio-page {
+  width: 210mm;
+  height: 297mm;
+  margin:40px auto;
+  padding: 40px 100px 40px 120px;
+  position: relative;
+  background-color: white;
+  border-radius: 7px;
+}
+.bio-page .page-content{
+    margin-top: 80px;
+    position: relative;
+}
+.bio-field article {
+  width: 100%;
+  padding: 7px 10px;
+  margin: 4px 0;
+  font-size: 14px;
+  z-index: 2;
+  border: 1px solid transparent;
+}
+.field-flex article:focus-visible {
+  outline: none !important;
+  box-shadow: 0px 13.295px 26.59px rgba(0, 0, 0, 0.06);
+  border-radius: 5.318px;
+  border: 1px solid #3388E4;
+}
+.bio-field:hover article:focus-visible {
+    border: 1px solid #3388E4 !important;
+}
+
+.bio-field:hover article {
+  border: 1px solid #dae3ec;
+  border-radius: 3px;
+}
+.field-flex {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.bio-field .field{
+  flex: 1 1 32%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.bio-field .value{
+  flex: 1 1 67%;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.bio-field.main:before {
+  content: ":";
+  position: absolute;
+  left: 32.2%;
+}
+.field-flex .bio-field {
+  flex: auto;
+  display: flex;
+  grid-gap: 15px;
+  gap: 15px;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.bcontainer {
+  max-width: 100% !important;
+}
+.back-img {
+  position: absolute;
+  width: 190mm;
+  height: 277mm;
+  left: 10mm;
+  top: 10mm;
+}
+.bio-page .page-content {
+  display: flex;
+  flex-direction: column;
+}
+.action-btn {
+  position: absolute;
+  left: 0;
+  margin-left: -55px;
+}
+.action-btn .action{
+  gap: 5px;
+}
+.action-btn .action, .action-btn-right {
+  position: relative;
+}
+
+.action-bold{
+  display: none;
+}
+.bio-field .action:hover .action-bold {
+  display: block;
+}
+.bio-field .action:hover .action-normal {
+  display: none;
+}
+.bio-field .action {
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+}
+
+.field-flex.small-width .value > .field-flex {
+  width: calc(100% - 200px);
+}
+.field-flex .value > .field-flex {
+  width: calc(100% - 35px);
+}
+.dcursor {
+  cursor: initial !important;
+}
+
+.dcursor article{
+  cursor: text;
+}
+.action .move-field {
+  cursor: grab;
+}
+.bio-field .field {
+  font-weight: 600;
+}
+.bio-placeholder {
+    position: absolute;
+    padding: 7px 10px;
+    opacity: 0.7;
+}
+
+article:focus-visible + .bio-placeholder{
+  display: none;
+}
+
+.pageno {
+  display: inline-block;
+  position: fixed;
+  padding: 10px !important;
+  background-color: white;
+  top: 0;
+  left: 0;
+}
+.action-btn-right {
+  position: absolute;
+  right: 0;
+  margin-right: -30px;
+  top: 10px;
+}
+
+
+.action-btn-right, .action-btn {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transition:all 0.5s ease;
+}
+
+.bio-field:hover .action-btn, .bio-field:hover .action-btn-right {
+  display: flex !important;
+  transition:all 0.5s ease;
+  opacity: 1;
+}
+
+.bio-field.main::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 50px;
+}
+
+.bio-field.main::after:hover .action-btn, .bio-field.main::after:hover .action-btn-right{
+  display: flex !important;
+  transition:all 0.5s ease;
+  opacity: 1;
+}
+
+.bio-actions {
+  position: fixed;
+  top: 40px;
+  left: calc(50% + 112mm);
+  margin-right: -100px;
+  width: 100%;
+  z-index: 999;
+}
+
+.bio-actions .action{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+  background-color: white;
+  border-radius: 40px;
+  box-shadow: 0px 24px 40px rgba(0, 35, 55, 0.1);
+  -webkit-backface-visibility: hidden;
+}
+
+.bio-actions .action:hover::after {
+  background-color: #002337 !important;
+  color: white !important;
+  content: attr(title);
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+
+.action-btn.edit {
+  display: flex;
+  margin-left: -28px;
+}
+
+@media only screen and (max-width: 767px) {
+  .tooltip.show {
+    opacity: 0 !important;
+}
+  .mhide {
+    display: none !important;
+  }
+  .bio-actions .action {
+    background-color: #008FE1;
+    width: 60px;
+    height: 60px;
+  }
+  .bio-actions {
+    position: fixed;
+    bottom: 70px !important;
+    top: auto;
+    left: 80%;
+    width: 100%;
+    z-index: 999;
+}
+}
+
+@media (min-width: 768px) {
+  .dhide {
+    display: none !important;
+  }
+  .action-btn.edit.dhide {
+    display: none !important;
+  }
+}
